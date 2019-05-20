@@ -47,9 +47,12 @@ if (cdvMinSdkVersion == null) {
     ext.cdvMinSdkVersion = minSdk;
 }
 
+ext.cdvBuildMultipleApks = true;
+
 if (!project.hasProperty('xwalkCommandLine')) {
     ext.xwalkCommandLine = getConfigPreference("xwalkCommandLine")
 }
+
 // Apply values after project's build-extras.gradle
 cdvPluginPostBuildExtras.add({
     repositories {
